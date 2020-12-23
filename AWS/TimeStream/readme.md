@@ -1,44 +1,37 @@
-# Serverless Streaming Timeseries Data Collection for AMAZON Timestream
+# Stream and Store Time Series Data using Kinesis Streaming and Amazon Timestream
 
 ## Please note
 
-While the gist of this repository has fully functional streaming setup which can stream timeseries data and write in to target TimeStream DB, the objective is to provide basic idea of how to collect and store Time Series data in to AMAZON Timestream
+While the gist of this repository has fully functional streaming setup which can stream, collect and write timeseries data in to target TimeStream DB, the objective is to provide basic idea of how to collect and store Time Series data in to Amazon Timestream.The performance and other limitations of aws services were not considered while creating these gists. 
 
 
 ## Prerequisites
 
 > Python3.X with dependent modules
 
-> I AM role and other AWS access permissions
+> IAM role and other AWS access permissions
 
 
 ## How to RUN
 
-Create lambda function , deploy and schedule to run
+Create a lambda function , deploy and schedule them to run as per the timeseries events window
 
-Create Kinesis Data Streams
-
-```
-python3 stream_ws.py
-````
-
-Create Amazon TimeStream DB
+Create Amazon TimeStream DB and table
 
 ```
-python stream_ws.py
+python timestreamdbcreate.py
+python timestreamtablecreate.py
 ```
 
 ## Databases
 
-<b>AMAZON TimeStream : </b> TimeStream is used to store all the timeseries data
+<b>Amazon TimeStream : </b> TimeStream is used to store all the timeseries data
 
 ## Compute
-<b>AWS Lambda: </b> Lambda is used to read from kinesis and write data in to TimeStream DB
+<b>AWS Lambda: </b> Lambda is used to read data from kinesis and to write data in to TimeStream DB
 
 ## Streaming
 <b>Amazon Kinesis: </b> Kinesis is used to stream the ordered TimeSeries data
-
-Make sure you've <b>dependencies</b> installed ahead as per requirements.txt
 
 
 ## Dependent Libraries
