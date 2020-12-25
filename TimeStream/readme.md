@@ -2,7 +2,7 @@
 
 ## Please note
 
-This repository has fully functional streaming setup which can stream, collect and write timeseries data in to target TimeStream DB, the objective is to provide basic idea of how to collect and store Time Series data in to Amazon Timestream.The performance and other aspects of aws services were not considered while creating these gists. 
+The objective is to provide basic idea of how to collect and store Time Series data in to Amazon Timestream.The performance and other aspects of aws services were not considered while creating these gists.
 
 
 ## Prerequisites
