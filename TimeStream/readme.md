@@ -1,8 +1,8 @@
-# Stream and Store Time Series Data using Kinesis Streaming and Amazon Timestream
+# Collect and Store Streaming TimeSeries data into Amazon TimeStream DB
 
 ## Please note
 
-While the gist of this repository has fully functional streaming setup which can stream, collect and write timeseries data in to target TimeStream DB, the objective is to provide basic idea of how to collect and store Time Series data in to Amazon Timestream.The performance and other limitations of aws services were not considered while creating these gists. 
+This repository has fully functional streaming setup which can stream, collect and write timeseries data in to target TimeStream DB, the objective is to provide basic idea of how to collect and store Time Series data in to Amazon Timestream.The performance and other aspects of aws services were not considered while creating these gists. 
 
 
 ## Prerequisites
