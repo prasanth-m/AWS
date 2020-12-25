@@ -2,7 +2,7 @@
 
 ## Please note
 
-The objective is to provide basic idea of how to collect and store Time Series data in to Amazon Timestream.The performance and other aspects of aws services were not considered while creating these gists.
+The objective is to provide basic idea of how to collect and store Time Series data in to Amazon Timestream.The latency and other aspects of aws services were not considered while creating these gists.
 
 
 ## Prerequisites
