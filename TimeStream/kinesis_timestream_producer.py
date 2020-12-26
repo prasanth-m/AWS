@@ -11,7 +11,7 @@ def put_to_stream(inventory, price, recorded_time):
    
     payload = {
          'MeasureValue': str(price),
-         'MeasureName': 'price', 
+         'MeasureName': 'qty', 
          'MeasureValueType': 'DOUBLE', 
          'Dimensions': [{
                         'Name': 'inventory', 
