@@ -7,10 +7,10 @@ my_stream_name = 'timeseries-stream'
 
 kinesis_client = boto3.client('kinesis', region_name='us-east-1')
 
-def put_to_stream(inventory, price, recorded_time):
+def put_to_stream(inventory, qty, recorded_time):
    
     payload = {
-         'MeasureValue': str(price),
+         'MeasureValue': str(qty),
          'MeasureName': 'qty', 
          'MeasureValueType': 'DOUBLE', 
          'Dimensions': [{
@@ -28,10 +28,10 @@ def put_to_stream(inventory, price, recorded_time):
    # print(put_response)
 
 while True:
-    price = random.randint(1000, 1100)
+    qty = random.randint(1000, 1100)
     recorded_time = str(int(round(time.time() * 1000)))
     inventory = 'phone'
-    put_to_stream(inventory, price, recorded_time)
+    put_to_stream(inventory, qty ,recorded_time)
 
     # wait for 5 second
     time.sleep(1)
