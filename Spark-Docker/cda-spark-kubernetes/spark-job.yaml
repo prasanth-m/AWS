@@ -1,0 +1,29 @@
+apiVersion: "sparkoperator.k8s.io/v1beta2"
+kind: SparkApplication
+metadata:
+  name: spark-job
+  namespace: default
+spec:
+  type: Python
+  pythonVersion: "3"
+  mode: cluster
+  image: "XX.dkr.ecr.ap-south-1.amazonaws.com/cda-spark-kubernetes:latest"
+  imagePullPolicy: Always
+  mainApplicationFile: local:////opt/application/cda_spark_kubernetes.py
+  arguments: ['XX','delta/input/students.csv','/delta/output/students_table','ap-south-1','XX','XX']
+  sparkVersion: "3.1.1"
+  restartPolicy:
+    type: OnFailure
+    onFailureRetries: 2
+  driver:
+    cores: 1
+    memory: "1G"
+    labels:
+      version: 3.1.1
+    serviceAccount: spark
+  executor:
+    cores: 1
+    instances: 1
+    memory: "1G"
+    labels:
+      version: 3.1.1
