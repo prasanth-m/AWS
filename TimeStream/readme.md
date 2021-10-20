@@ -37,3 +37,6 @@ python timestreamtablecreate.py
 ## Dependent Libraries
 
 ### Boto3 : https://pypi.org/project/boto3/
+
+## IoT TimeSeries Kafka AWS LAMBDA
+[Read more @ Medium.com](https://medium.com/cloud-data-analytics/collect-and-store-streaming-timeseries-data-into-amazon-timestream-db-6178bee7434a)
